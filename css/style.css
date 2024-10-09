@@ -457,7 +457,7 @@
 .Restro .r-service .s-image {
   width: 40%;
   height: 100vh;
-  background-image: url("/images/resto-bar.jpg");
+  background-image: url("../images/resto-bar.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
