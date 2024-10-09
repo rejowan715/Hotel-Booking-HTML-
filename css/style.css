@@ -1,0 +1,755 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text: white;
+  --button: #c5a880;
+  --form-bg: #222222;
+  --booking-bg: #f8f8f8;
+  --hover-text: #ffa500;
+  --hover-bg: #f5f5f7;
+  --p-text: #b7b7b7;
+  --card-bg: #ffffff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* --_text: var(--text, white); */
+  color: var(--text);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/bg_1.jpg");
+  /* background-image: url("/images/bg_1.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+
+.navigation {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo h2 {
+  font-size: 2em;
+}
+
+.logo p {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2px;
+  letter-spacing: 1.5px;
+}
+
+.menu ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text);
+  transition: 0.5s ease-out;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.menu ul li a:hover {
+  color: var(--hover-text);
+  background-color: var(--hover-bg);
+}
+
+.center-text {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 40%;
+  transform: translate(-30%, -35%);
+  padding: 10px;
+}
+
+.center-text span {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.center-text h1 {
+  font-size: 5em;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+}
+
+/* utility class start  */
+.button {
+  padding: 15px 25px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+/* utility class end  */
+
+.tour {
+  background: var(--button);
+  border: 1px solid var(--button);
+}
+
+.learn {
+  background: none;
+  border: 1px solid var(--booking-bg);
+}
+
+.learn:hover {
+  background-color: var(--booking-bg);
+  border: 1px solid var(--booking-bg);
+  color: var(--form-bg);
+}
+
+.form-text {
+  width: 80%;
+  padding: 2.5rem 2.5rem;
+  background-color: var(--form-bg);
+  text-align: left;
+  bottom: -2rem;
+  transform: translate(12%, 30%);
+  position: absolute;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.form-text form {
+  display: flex;
+  gap: 20px;
+}
+
+.form-text .form-input {
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.input-text {
+  background: none;
+  border: none;
+  color: var(--p-text);
+  font-weight: bold;
+  padding: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-text .form-input select {
+  padding: 8px;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-text .form-input i {
+  font-size: 1rem;
+  color: var(--p-text);
+}
+
+.form-text .form-button {
+  background-color: var(--button);
+  color: var(--text);
+  text-align: center;
+  font-size: 1.1rem;
+  word-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  width: 16%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* Styling Booking Section  */
+
+.Service {
+  background-color: var(--booking-bg);
+  margin: auto;
+  display: flex;
+  padding: 10em 8em;
+  align-items: start;
+}
+
+.Service .service-gallery {
+  flex-basis: 50%;
+  display: flex;
+  gap: 25px;
+}
+
+.Service .service-gallery .f-service {
+  /* width: 45%; */
+  text-align: center;
+  padding: 20px;
+  background-color: var(--card-bg);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 1s ease-out;
+}
+
+.Service .service-gallery .f-service h2 {
+  font-family: "Old Standard TT", serif;
+  padding: 8px 0;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  transition: 1s ease-out;
+}
+
+.Service .service-gallery .service-col:hover .f-service {
+  background-color: #222222;
+  color: white;
+}
+
+.Service .service-gallery .service-col:hover h2 {
+  /* background-color: #222222; */
+  color: white;
+}
+
+/* utility class start */
+
+.p-text {
+  color: #a3a3a3;
+  font-size: 16px;
+  line-height: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* utility class end */
+
+.Service .service-gallery .f-image {
+  /* margin-top: 25px; */
+  /* width: 45%; */
+  height: 35vh;
+
+  /* border: 2px solid blueviolet; */
+}
+
+.Service .service-gallery .f-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.Service .service-text {
+  flex-basis: 60%;
+}
+
+.service-text {
+  padding: 3rem 4rem;
+}
+
+/* utilit y class start */
+
+.sub-heading1 {
+  font-size: 1rem;
+  color: #c7ab84;
+  margin-bottom: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.sub-heading2 {
+  font-size: 4rem;
+  font-family: "Old Standard TT", serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #323232;
+}
+
+/* utility class end */
+
+.explore-service {
+  background-color: var(--booking-bg);
+  padding: 6em;
+  margin: auto;
+  text-align: center;
+}
+
+.service-items {
+  /* padding: 40px 80px; */
+  margin: 6rem auto 0;
+  display: flex;
+  gap: 22px;
+}
+
+.service-items .items {
+  background-color: #ffffff;
+  width: 15%;
+  padding: 20px 15px;
+  cursor: pointer;
+  border-radius: 50% 50% 50% 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 1s ease-out;
+}
+
+.service-items .items:hover {
+  background-color: silver;
+}
+
+.service-items .items .item-title {
+  font-size: 20px;
+  margin: 20px 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: #333333;
+}
+
+.booking {
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/bg_1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.booking .booking-text {
+  position: absolute;
+  transform: translate(40%, 50%);
+}
+
+.booking .booking-text .booking-heading {
+  color: #ffffff;
+  font-family: "Old Standard TT", serif;
+  /* line-height: 50px; */
+  display: flex;
+  gap: 30px;
+}
+
+.booking .booking-text .booking-heading .heading-title {
+  line-height: 50px;
+  width: 50%;
+}
+
+.booking .booking-text .booking-heading button {
+  padding: 1.5rem 3rem;
+  color: #fafafa;
+  font-family: "Nunito Sans", sans-serif;
+  /* margin-left: 2rem; */
+  font-weight: bold;
+}
+
+.feature {
+  padding: 8rem 0;
+  text-align: center;
+  background-color: var(--booking-bg);
+}
+
+.feature .room-type {
+  /* padding: 0 6rem; */
+  display: flex;
+  justify-content: center;
+
+  gap: 1.5em;
+}
+
+.feature .suit-room {
+  width: 26%;
+
+  /* height: 100vh; */
+  margin-top: 3rem;
+  /* margin: auto; */
+
+  /* height: 80vh; */
+  /* padding: 3rem; */
+  /* background-color: #222222; */
+  background-color: var(--card-bg);
+}
+
+.feature .suit-room:hover,
+.feature .suit-room:hover h2,
+.feature .suit-room:hover .booknow {
+  background-color: #222222;
+  color: white;
+}
+
+.feature .suit-room:hover .card-img {
+  opacity: 0.5;
+}
+
+.feature .suit-room img {
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.feature .suit-room h2 {
+  font-size: 30px;
+  padding: 20px 0;
+  font-weight: 400;
+  font-family: "Old Standard TT", serif;
+  color: black;
+}
+
+.feature .suit-room .price {
+  margin-top: 20px;
+  padding: 15px 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: #e8b86d;
+  background: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.feature .suit-room .booknow {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333333;
+  padding: 6px 8px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.videos {
+  position: relative;
+  background-color: var(--booking-bg);
+  height: 100vh;
+}
+.videos video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* Restro & Bar section  */
+
+.Restro {
+  background-color: var(--booking-bg);
+  text-align: center;
+}
+
+.Restro .r-service {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: 65px;
+  /* justify-content: space-around; */
+}
+
+.Restro .r-service .s-image {
+  width: 40%;
+  height: 100vh;
+  background-image: url("/images/resto-bar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.Restro .r-service .s-image .s-cooking-icon {
+  width: 100px;
+  height: 110px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-left: 30px;
+  top: 40%;
+  right: -50px;
+
+  position: absolute;
+  /* text-align: center; */
+  background-color: #c5a880;
+}
+
+.Restro .cards {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: -45px;
+}
+.Restro .food-card {
+  width: 100%;
+  height: 25%;
+  padding: 30px 25px;
+  background-color: #fff;
+  margin-top: 10px;
+  gap: 20px;
+  display: flex;
+}
+
+.Restro .food-card .food-text {
+  font-size: 13px;
+  width: 120px;
+  text-align: left;
+  font-weight: 600;
+  color: #323232;
+  font-family: "Nunito Sans", sans-serif;
+  /* border: 1px solid red; */
+  /* word-spacing: 10px; */
+}
+
+.Restro .food-card .food-price {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  color: var(--button);
+}
+
+.Restro .food-card .food-img {
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid red; */
+}
+
+.Restro .food-card .food-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* happy guest styling  */
+
+.guest {
+  background-color: var(--booking-bg);
+  padding-top: 13rem;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.guest .guest-slider {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  grid-area: 40px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  transition: all 1s ease-in;
+}
+
+.guest .guest-slider .guest-card {
+  width: 100%;
+  height: 100%;
+  padding: 45px 30px;
+  background-color: var(--card-bg);
+  text-align: left;
+}
+
+.guest .guest-slider .guest-card .guest-card-head {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.guest .guest-slider .guest-card .guest-image {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.guest .guest-slider .guest-card .guest-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.guest .guest-slider .guest-card .guest-icon {
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--button);
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.guest .guest-slider .guest-card .guest-heading {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.guest .guest-slider .guest-card .guest-sub-heading {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* counter section styling */
+
+.counter {
+  background-color: #222222;
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  height: 35vh;
+  color: var(--text);
+}
+
+.counter .counter-text h1 {
+  font-size: 40px;
+  color: var(--button);
+}
+
+/* blog section styling  */
+
+.blog {
+  background-color: var(--booking-bg);
+  text-align: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.blog .blog-cards {
+  display: flex;
+  text-align: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.blog .blog-card {
+  width: 20%;
+  text-align: left;
+  background-color: var(--card-bg);
+}
+
+.blog .blog-card img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.blog .blog-card .blog-date {
+  padding: 20px 40px;
+}
+
+.blog .blog-card h1 {
+  color: #323232;
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+
+.blog .blog-card p {
+  padding: 20px;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px;
+  background-color: var(--booking-bg);
+}
+
+.gallery .gallery-img {
+  width: 30%;
+  height: 40%;
+  position: relative;
+  transition: all 1.5s ease-in;
+  cursor: pointer;
+}
+
+.gallery .gallery-img .gallery-icon {
+  width: 15%;
+  height: 15%;
+  font-size: 20px;
+}
+
+.gallery .gallery-img .gallery-icon i {
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--button);
+  top: 40%;
+  left: 40%;
+  position: absolute;
+  display: none;
+}
+
+.gallery .gallery-img:hover .gallery-icon i {
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* footer design  */
+
+.footer {
+  padding: 4rem 2rem;
+  background-color: #222222;
+  color: var(--text);
+}
+
+.footer .footer-items {
+  display: flex;
+  gap: 60px;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.footer .footer-items .footer-heading {
+  flex-basis: 20%;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer .footer-items .footer-heading h2 {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.footer .footer-items .footer-question {
+  flex-basis: 22%;
+}
+
+/* utilities classes  */
+
+.footer-h2 {
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 30px;
+}
+
+.s-text {
+  font-size: 18px;
+  color: #a3a3a3;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 15px 0;
+}
+
+.s-text span {
+  margin-left: 8px;
+}
